@@ -119,6 +119,30 @@ namespace DataStructureProblems
             }
             return count;
         }
+        public void InserInParticularPosition(int position, int data)
+        {
+            Node newestnode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newestnode;
+            }
+            if (position == 0)
+            {
+                newestnode.next = this.head;
+                this.head = newestnode;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestnode.next = prev.next;
+            prev.next = newestnode;
+        }
     }
 }
     
