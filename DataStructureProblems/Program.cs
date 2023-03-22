@@ -12,7 +12,8 @@ namespace DataStructureProblems
             {
                 LinkedList linkedList = new LinkedList();
                 Console.WriteLine("\nChoose option to Perform \n1.Create Simple Linked List \n2.Reverse in Order " +
-                    "\n3.Insert At Particular Position \n4.Delete First Element \n5.Delete Last Element \n6.Search Linked List \n7.Insert at Particular Position\n8.Exit ");
+                    "\n3.Insert At Particular Position \n4.Delete First Element \n5.Delete Last Element \n6.Search Linked List " +
+                    "\n7.Insert at Particular Position \n8.Delete At Particular Position \n9.Exit ");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -62,7 +63,17 @@ namespace DataStructureProblems
                         linkedList.InserInParticularPosition(opt+1,40);
                         linkedList.Display();
                         break;
-                        case 8:
+                    case 8:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(40);
+                        linkedList.Add(70);
+                        int search= linkedList.Search(40);
+                        linkedList.DeleteNodeAtParticularPosition(search);
+                        linkedList.Display();
+                        linkedList.Size();
+                        break;
+                    case 9:
                         flag = false;
                         break;
                 }
