@@ -26,6 +26,7 @@ namespace DataStructureProblems
                 temp.next = node;
             }
             Console.WriteLine("{0} Inserted into Linked List", node.data);
+
         }
     }
 }
