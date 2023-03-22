@@ -12,7 +12,7 @@ namespace DataStructureProblems
             {
                 LinkedList linkedList = new LinkedList();
                 Console.WriteLine("\nChoose option to Perform \n1.Create Simple Linked List \n2.Reverse in Order " +
-                    "\n3.Insert At Particular Position \n4.Delete First Element \n5.Exit ");
+                    "\n3.Insert At Particular Position \n4.Delete First Element \n5.Delete Last Element \n6.Exit ");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -41,6 +41,13 @@ namespace DataStructureProblems
                         linkedList.Display();
                         break;
                         case 5:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLastNode();
+                        linkedList.Display();
+                        break;
+                        case 6:
                         flag = false;
                         break;
 
