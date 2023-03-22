@@ -103,6 +103,22 @@ namespace DataStructureProblems
             }
             NewNode.next = null;
         }
+        public int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data.Equals(value))
+                {
+                    Console.WriteLine(count);
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
+        }
     }
 }
     
